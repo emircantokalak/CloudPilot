@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="562.0" maxWidth="780.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1540.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateProfileController">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="501.0" style="-fx-background-color: #AED6F1;">
+         <children>
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="62.0" onAction="#handlegobackButton" style="-fx-background-color: #1F6898;">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="createButton" layoutX="144.0" layoutY="636.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: #334c71; -fx-background-color: #3F89BB;" text="Create">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <PasswordField fx:id="passwordField" layoutX="95.0" layoutY="544.0" prefHeight="50.0" prefWidth="300.0" promptText="Password" AnchorPane.leftAnchor="95.0">
+               <font>
+                  <Font size="19.0" />
+               </font></PasswordField>
+            <TextField fx:id="roleField" layoutX="94.0" layoutY="479.0" prefHeight="50.0" prefWidth="300.0" promptText="Role" AnchorPane.leftAnchor="95.0">
+               <font>
+                  <Font size="19.0" />
+               </font></TextField>
+            <TextField fx:id="emailField" layoutX="95.0" layoutY="414.0" prefHeight="50.0" prefWidth="300.0" promptText="Email" AnchorPane.leftAnchor="95.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <TextField fx:id="lastNameField" layoutX="95.0" layoutY="349.0" prefHeight="50.0" prefWidth="300.0" promptText="Last Name" AnchorPane.leftAnchor="95.0">
+               <font>
+                  <Font size="19.0" />
+               </font></TextField>
+            <TextField fx:id="firstNameField" layoutX="95.0" layoutY="284.0" prefHeight="50.0" prefWidth="300.0" promptText="First Name" AnchorPane.leftAnchor="95.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="employeeIdField" layoutX="95.0" layoutY="219.0" prefHeight="50.0" prefWidth="300.0" promptText="Employee ID" AnchorPane.leftAnchor="95.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Text fill="#334c71" layoutX="67.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Impact;" text="Create Profile" textAlignment="CENTER" wrappingWidth="402.611629486084">
+               <font>
+                  <Font size="63.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      
+      <ImageView fitHeight="600.0" fitWidth="600.0" layoutX="626.0" layoutY="65.0">
+         <image>
+            <Image url="@/images/icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

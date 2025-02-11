@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="800.0" maxWidth="1540.0" prefHeight="800.0" prefWidth="1540.0" style="-fx-background-color: #AED6F1;" stylesheets="/caspian.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPageController">
+    <children>
+        <Pane prefHeight="70.0" prefWidth="1540.0" style="-fx-background-color: #334c71;">
+            <children>
+                <Label alignment="BOTTOM_CENTER" layoutX="720.0" layoutY="18.0" text="Welcome" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font></Label>
+                <Button fx:id="exitpage" layoutX="1472.0" layoutY="24.0" mnemonicParsing="false" onAction="#exitpage" prefHeight="23.0" prefWidth="34.0" style="-fx-background-color: #1F6898;" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="34.0">
+                     <image>
+                        <Image url="@/images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            </children>
+        </Pane>
+        <AnchorPane layoutY="70.0" prefHeight="330.0" prefWidth="510.0" style="-fx-background-color: #AED6F1; -fx-border-color: black;">
+            <children>
+                <Button layoutX="180.0" layoutY="260.0" mnemonicParsing="false" onAction="#goToFlights" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #334c71;" text="Flights" textFill="WHITE" />
+                <ImageView fitHeight="186.0" fitWidth="231.0" layoutX="140.0" layoutY="50.0">
+                    <image>
+                        <Image url="@/images/flights.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="510.0" layoutY="70.0" prefHeight="330.0" prefWidth="520.0" style="-fx-background-color: #AED6F1; -fx-border-color: black;">
+            <children>
+                <Button layoutX="180.0" layoutY="260.0" mnemonicParsing="false" onAction="#goToCustomer" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #334c71;" text="Passenger" textFill="WHITE" />
+                <ImageView fitHeight="180.0" fitWidth="230.0" layoutX="140.0" layoutY="50.0">
+                    <image>
+                        <Image url="@/images/passenger.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="400.0" prefHeight="330.0" prefWidth="510.0" style="-fx-background-color: #AED6F1; -fx-border-color: black;">
+            <children>
+                <Button layoutX="180.0" layoutY="260.0" mnemonicParsing="false" onAction="#goToCreateCustomer" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #334c71;" text="New Passenger" textFill="WHITE" />
+                <ImageView fitHeight="210.0" fitWidth="230.0" layoutX="140.0" layoutY="50.0">
+                    <image>
+                        <Image url="@/images/newpassenger.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="1030.0" layoutY="70.0" prefHeight="330.0" prefWidth="510.0" style="-fx-background-color: #AED6F1; -fx-border-color: black;">
+            <children>
+                <Button layoutX="180.0" layoutY="260.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #334c71;" text="Profile" textFill="WHITE" />
+                <ImageView fitHeight="180.0" fitWidth="230.0" layoutX="140.0" layoutY="50.0">
+                    <image>
+                        <Image url="@/images/profile.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="510.0" layoutY="400.0" prefHeight="330.0" prefWidth="520.0" style="-fx-background-color: #AED6F1; -fx-border-color: black;">
+            <children>
+                <ImageView fitHeight="180.0" fitWidth="230.0" layoutX="140.0" layoutY="50.0">
+                    <image>
+                        <Image url="@/images/checkin.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="180.0" layoutY="260.0" mnemonicParsing="false" onAction="#goToCheckIn" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #334c71;" text="Check-In" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="1030.0" layoutY="400.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="510.0" style="-fx-background-color: #AED6F1; -fx-border-color: black;">
+            <children>
+                <Button layoutX="180.0" layoutY="260.0" mnemonicParsing="false" onAction="#goToServices" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #334c71;" text="Services" textFill="WHITE" />
+                <ImageView fitHeight="292.0" fitWidth="323.0" layoutX="89.0">
+                    <image>
+                        <Image url="@/images/Services.png" />
+                    </image>
+                </ImageView>
+            </children>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+        </AnchorPane>
+        <Pane layoutY="730.0" prefHeight="70.0" prefWidth="1540.0" style="-fx-background-color: #334c71;">
+            <children>
+                <Label alignment="BOTTOM_CENTER" layoutX="729.0" layoutY="27.0" text="Cloud Pilot" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

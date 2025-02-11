@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="servicesController">
+   <top>
+      <AnchorPane prefHeight="60.0" prefWidth="1540.0" style="-fx-background-color: #334c71;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="675.0" layoutY="7.0" prefHeight="40.0" prefWidth="150.0" text="Services" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="backButton" layoutX="20.0" layoutY="15.0" mnemonicParsing="false" onAction="#exitpage" style="-fx-background-color: #2EAAFB;">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="38.0">
+                     <image>
+                        <Image url="@/images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="60.0" prefWidth="1500.0" style="-fx-background-color: #334c71;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="701.0" layoutY="15.0" prefHeight="30.0" prefWidth="98.0" text="CloudPilot" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="680.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="60.0" prefWidth="1540.0" style="-fx-background-color: #EAEDED;">
+               <children>
+                  <Label layoutX="30.0" layoutY="15.0" prefHeight="30.0" prefWidth="150.0" text="Enter Boarding ID">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="boardingIdField" layoutX="200.0" layoutY="15.0" prefHeight="30.0" prefWidth="200.0" promptText="Boarding ID" />
+                  <Button fx:id="fetchBoardingsButton" layoutX="450.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleFetchBoardingsButtonAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #AED6F1;" text="Fetch" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="70.0" prefHeight="610.0" prefWidth="1540.0" style="-fx-background-color: #D6EAF8;">
+               <children>
+                  <RadioButton fx:id="extraDrinkRadioButton" layoutX="281.0" layoutY="140.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="129.0" text="Extra Drink">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="extraMealRadioButton" layoutX="281.0" layoutY="410.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Extra Meal">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="extraLuggageRadioButton" layoutX="782.0" layoutY="152.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Extra Luggage">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="suitCenterRadioButton" layoutX="782.0" layoutY="395.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Suit Center">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <TextArea fx:id="serviceDescriptionField" layoutX="1075.0" layoutY="198.0" prefHeight="200.0" prefWidth="300.0" promptText="Service Description">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextArea>
+                  <ImageView fitHeight="208.0" fitWidth="200.0" layoutX="56.0" layoutY="63.0">
+                     <image>
+                        <Image url="@/images/extradrink.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="56.0" layoutY="325.0">
+                     <image>
+                        <Image url="@/images/meal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="542.0" layoutY="67.0">
+                     <image>
+                        <Image url="@/images/baggage.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="550.0" layoutY="325.0">
+                     <image>
+                        <Image url="@images/lounge.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="saveButton" layoutX="1150.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #AED6F1;" text="Save" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

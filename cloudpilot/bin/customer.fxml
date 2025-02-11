@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1540.0" style="-fx-background-color: #AED6F1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerController">
+    <!-- Üst Kısım -->
+    <top>
+        <AnchorPane prefHeight="62.0" prefWidth="800.0" style="-fx-background-color: #334c71;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutX="670.0" layoutY="2.0" prefHeight="58.0" prefWidth="198.0" text="Passenger" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="31.0" />
+                    </font>
+                </Label>
+                <Button layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#exitpage" style="-fx-background-color: #2EAAFB;">
+                    <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/back.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+    </top>
+    <!-- Alt Kısım -->
+    <bottom>
+        <AnchorPane prefHeight="76.0" prefWidth="800.0" style="-fx-background-color: #334c71;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="searchField" layoutX="620.0" layoutY="18.0" prefHeight="40.0" prefWidth="300.0" promptText="Passenger ID" />
+                <Button layoutX="939.0" layoutY="18.0" onAction="#search" prefHeight="40.0" prefWidth="74.0" text="Search" />
+                <Button layoutX="1020.0" layoutY="18.0" onAction="#editPassenger" prefHeight="40.0" prefWidth="74.0" text="Edit" />
+                <Button layoutX="1100.0" layoutY="18.0" onAction="#deletePassenger" prefHeight="40.0" prefWidth="74.0" text="Delete" />
+            </children>
+        </AnchorPane>
+    </bottom>
+    <!-- Sol Kısım -->
+    <left>
+        <TableView fx:id="passengerTable" prefHeight="581.0" prefWidth="830.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="passengerIDColumn" text="ID" />
+                <TableColumn fx:id="firstNameColumn" prefWidth="164.7999725341797" text="First Name" />
+                <TableColumn fx:id="lastNameColumn" prefWidth="172.00006103515625" text="Last Name" />
+                <TableColumn fx:id="genderColumn" prefWidth="106.4000244140625" text="Gender" />
+                <TableColumn fx:id="birthDateColumn" prefWidth="124.0" text="Birth Date" />
+                <TableColumn fx:id="phoneNumberColumn" prefWidth="180.0" text="Phone Number" />
+            </columns>
+            <BorderPane.margin>
+                <Insets bottom="50.0" left="40.0" right="20.0" top="30.0" />
+            </BorderPane.margin>
+        </TableView>
+    </left>
+    <!-- Sağ Kısım -->
+    <right>
+        <TableView fx:id="BoardingTable" prefHeight="582.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="50.0" left="20.0" right="40.0" top="30.0" />
+            </BorderPane.margin>
+            <columns>
+                <TableColumn fx:id="B_PassengerIDColumn" prefWidth="0" text="PassengerID" visible="false" />
+                <TableColumn fx:id="BoardingIDColumn" prefWidth="145.59997254610062" text="Boarding ID" />
+                <TableColumn fx:id="Flight_numberColumn" prefWidth="128.00001525878906" text="Flight Number" />
+                <TableColumn fx:id="seatNumberColumn" prefWidth="99.199951171875" text="Seat Number" />
+                <TableColumn fx:id="extraDrinkColumn" prefWidth="99.199951171875" text="Extra Drink" />
+                <TableColumn fx:id="extraMealColumn" prefWidth="99.199951171875" text="Extra Meal" />
+                <TableColumn fx:id="extraLuggageColumn" prefWidth="99.199951171875" text="Extra Luggage" />
+                <TableColumn fx:id="suitCenterColumn" prefWidth="99.199951171875" text="Suit Center" />
+                <TableColumn fx:id="serviceDescriptionColumn" prefWidth="99.199951171875" text="Service Description" />
+            </columns>
+        </TableView>
+    </right>
+</BorderPane>

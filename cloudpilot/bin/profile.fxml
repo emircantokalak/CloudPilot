@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditProfileController">
+   <top>
+      <AnchorPane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #334c71;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="721.0" layoutY="11.0" prefHeight="48.0" prefWidth="98.0" text="Profile" textFill="#f4f2f2">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Button layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#exitpage" style="-fx-background-color: #2EAAFB;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #334c71;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="729.0" layoutY="26.0" text="Cloud Pilot" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #AED6F1;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="profileId" layoutX="270.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="ID" />
+            <TextField fx:id="firstNameField" layoutX="270.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Name" />
+            <TextField fx:id="lastNameField" layoutX="270.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Lastname" />
+            <TextField fx:id="emailField" layoutX="270.0" layoutY="330.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Email" />
+            <TextField fx:id="roleField" layoutX="270.0" layoutY="390.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Role" />
+            <Label contentDisplay="CENTER" layoutX="271.0" layoutY="50.0" prefHeight="70.0" prefWidth="272.0" text="Your Information:" textFill="#f4f4f4">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Button layoutX="332.0" layoutY="520.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #2EAAFB;" text="Edit" />
+            <Button layoutX="332.0" layoutY="570.0" mnemonicParsing="false" onAction="#loadDataFromDatabase" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #2EAAFB;" text="Load Data" fx:id="loadDataButton" />
+            <Label layoutX="175.0" layoutY="160.0" text="ID :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="165.0" layoutY="220.0" text="Name :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="155.0" layoutY="280.0" text="Lastname :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="166.0" layoutY="340.0" text="Email :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="168.0" layoutY="400.0" text="Role :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="155.0" layoutY="460.0" text="Password :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="450.0" fitWidth="550.0" layoutX="850.0" layoutY="110.0">
+               <image>
+                  <Image url="@/images/profile2.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="passwordField" layoutX="270.0" layoutY="450.0" prefHeight="40.0" prefWidth="280.0" promptText="************" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
