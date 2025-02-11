@@ -1,5 +1,17 @@
 # JavaFX Project
 
+# Author
+This project was created by:
+- **Abdullah Esin**
+- **Sevval Kurtulmus**
+- **Emir Can Tokalakoglu**
+
+Feel free to check out our GitHub profiles for more information:
+- [Abdullah Esin's GitHub](https://github.com/AbdullahESIN)
+- [Sevval's GitHub](https://github.com/SevvalKurtulmus)
+- [Emir's GitHub](https://github.com/emircantokalak)
+
+
 ## Requirements
 - **JavaFX** must be installed and properly configured.
 - **JDBC Connector JAR** is required for database connectivity.
